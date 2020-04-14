@@ -8,6 +8,7 @@
 
 import UIKit
 
+///Reward screen shown after the user completed an alarm task
 class RewardVC: UIViewController {
 
     let circleHolder = UIView()
@@ -18,6 +19,7 @@ class RewardVC: UIViewController {
     let imageView = UIImageView()
     let imageArray = [#imageLiteral(resourceName: "meme2"),#imageLiteral(resourceName: "meme4"),#imageLiteral(resourceName: "meme6"),#imageLiteral(resourceName: "meme3"),#imageLiteral(resourceName: "meme5"),#imageLiteral(resourceName: "meme1")]
     
+    ///Main function of the view controller. all of the functions UIelement setups are called here.
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,15 +36,8 @@ class RewardVC: UIViewController {
             progressCircleSetup()
             textView.text = "You have completed another task! Well done!"
         }
-        
-        
-        
-        
-        
-        
-    }
-
     
+    }
 }
 
 extension RewardVC {
@@ -57,6 +52,7 @@ extension RewardVC {
         imageView.image = #imageLiteral(resourceName: "meme2")
     }
 
+    ///Setup for progress circle that show much task has been completed on the given day
     func progressCircleSetup(){
         let circlePath2 = UIBezierPath(arcCenter: view.center, radius: CGFloat(100), startAngle: CGFloat(Double.pi * 1.5), endAngle: CGFloat((Double.pi*1.5 + Double.pi * 2)), clockwise: true)
         
@@ -97,6 +93,7 @@ extension RewardVC {
         percentageLabel.font = UIFont.boldSystemFont(ofSize: 50)
     }
     
+    ///setup for button on screen
     func buttonSetup(){
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -109,10 +106,12 @@ extension RewardVC {
         button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
     }
     
+    ///action determines what happes when button is clicked
     @objc func buttonClicked(){
         dismiss(animated: true, completion: nil)
     }
     
+    ///setup for textview on screen
     func textViewSetup(){
         view.addSubview(textView)
         textView.translatesAutoresizingMaskIntoConstraints = false

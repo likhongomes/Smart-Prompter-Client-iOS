@@ -19,10 +19,10 @@ extension MainVC: AlarmVCDelegate {
     }
 }
 
-
+///Main view controller, this is the default view controller the user sees most of the time when they get in the app (while logged in)
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    
     let welcomeTextView = UILabel()
     let clockLabel = UILabel()
     let topBar = UIView()
@@ -42,7 +42,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let alarmTable = UITableView()
     
 
-    
+    ///Main function of the view controller. all of the functions UIelement setups are called here. 
     override func viewDidLoad() {
         ref = Database.database().reference()
 
@@ -94,6 +94,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    ///updates the time label and number of tasks the patient have
     @objc func updateTimeLabel() {
         alarmTable.reloadData()
         if activeAlarm.count != 0 {
@@ -105,7 +106,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         clockLabel.text = dateFormatter.string(from: Date())
     }
     
-    
+    ///reload table when table is swiped down
     @objc func reloadTable() {
         
         print("refreshing")
@@ -113,6 +114,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         refreshControl.endRefreshing()
     }
     
+    ///setup for summary lable on view
     func summaryLabelSetup(){
         topBar.addSubview(summaryLabel)
         summaryLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -126,6 +128,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         summaryLabel.text = "adasd "
     }
     
+    ///action when logout button is tapped
     @objc func logoutButtonClicked() {
         print("logout clicked")
         let firebaseAuth = Auth.auth()
@@ -143,7 +146,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
 
-    
+    ///Fetch data from firebase and put them in an array
     func fetchFromFirebase(){
         let userID = Auth.auth().currentUser?.uid
         ref.child("Patients").child(userID!).child("Alarms").observe(.childChanged, with: { (DataSnapshot) in
@@ -164,8 +167,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 }
 
             }
-                        
-            
+
         }) { (Error) in
             
         }
@@ -233,16 +235,19 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 extension MainVC: UNUserNotificationCenterDelegate {
     
+    ///detemines the number of rows to be presented in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return activeAlarm.count
     }
     
+    ///determines what should be printed out on screen
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = alarmTable.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath as IndexPath) as! UITableViewCell
         cell.textLabel?.text = activeAlarm[indexPath.row].label
         return cell
     }
     
+    ///detemines what happens when a row is tapped from the table
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AlarmVC()
         vc.alarm = activeAlarm[indexPath.row]
@@ -313,6 +318,7 @@ extension MainVC: UNUserNotificationCenterDelegate {
       completionHandler()
     }
     
+    ///Setup for logout button on screen
     func logoutButtonSetup(){
         view.addSubview(logoutButton)
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
@@ -331,6 +337,7 @@ extension MainVC: UNUserNotificationCenterDelegate {
         //logoutButton.backgroundColor = .black
     }
     
+    ///Setup for alarm table on screen
     func alarmTableSetup() {
         view.addSubview(alarmTable)
         alarmTable.translatesAutoresizingMaskIntoConstraints = false
@@ -344,7 +351,7 @@ extension MainVC: UNUserNotificationCenterDelegate {
         
     }
     
-    
+    ///Setup for topview on screen
     func topViewSetup() {
         view.addSubview(topBar)
         topBar.translatesAutoresizingMaskIntoConstraints = false
@@ -355,6 +362,7 @@ extension MainVC: UNUserNotificationCenterDelegate {
         topBar.backgroundColor = #colorLiteral(red: 0.1843137255, green: 0.2039215686, blue: 0.5647058824, alpha: 1)
     }
     
+    ///Setup for timelabel on screen
     func timeLabelSetup() {
         view.addSubview(timeLabel)
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -366,7 +374,7 @@ extension MainVC: UNUserNotificationCenterDelegate {
     }
     
     
-    
+    ///Setup for welcometextview on screen
     func welcomeTextViewSetup() {
         view.addSubview(welcomeTextView)
         welcomeTextView.translatesAutoresizingMaskIntoConstraints = false
@@ -383,6 +391,8 @@ extension MainVC: UNUserNotificationCenterDelegate {
         welcomeTextView.textColor = .white
     }
     
+    
+    ///Setup for clock label on screen
     func clockLabelSetup() {
         view.addSubview(clockLabel)
         clockLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -395,6 +405,7 @@ extension MainVC: UNUserNotificationCenterDelegate {
         clockLabel.textColor = .white
     }
     
+    ///reload table everytiem the view refreshes
     override func viewWillAppear(_ animated: Bool) {
         print("table should be cleared")
         alarmTable.reloadData()

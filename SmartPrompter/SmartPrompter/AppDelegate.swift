@@ -16,7 +16,6 @@ import FirebaseAnalytics
 import FirebaseStorage
 
 var dbQueue: DatabaseQueue!
-let alarmDB = AlarmDB()
 var activeAlarm = [Alarm]()
 var inactiveAlarm = [Alarm]()
 var ref: DatabaseReference!
@@ -35,12 +34,8 @@ var completedTask = Double()
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-    //var dbQueue: DatabaseQueue!
-    //let alarmDB = AlarmDB()
-    
-    //let notificationCenter = UNUserNotificationCenter.current()
 
-
+    ///First function called when the app is launched. Configures firebase, sets uiview and loads it accordingly
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         completedTask = 0
@@ -50,8 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         FirebaseApp.configure()
         ref = Database.database().reference()
         try! setupDatabase(application)
-        activeAlarm = alarmDB.getActiveAlarms()
-        inactiveAlarm = alarmDB.getInactiveAlarms()
         print("activeAlarm Count \(activeAlarm.count)")
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -66,8 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         window?.makeKeyAndVisible()
         registerForPushNotifications()
-        //getNotificationSettings()
-        //fetchFromFirebase()
+
         
         downloadNotificationSound()
         
@@ -88,6 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
+    ///Built in function to fetch data in the background
     func application(_ application: UIApplication,
                      performFetchWithCompletionHandler completionHandler:
                      @escaping (UIBackgroundFetchResult) -> Void) {
@@ -134,7 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     
-    
+    ///Register for remote notifications
     func application(
         _ application: UIApplication,
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
@@ -144,12 +137,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         print("Device Token: \(token)")
     }
     
+    ///Fallback from failiing to register
     func application(
         _ application: UIApplication,
         didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Failed to register: \(error)")
     }
 
+    
     private func setupDatabase(_ application: UIApplication) throws {
         let databaseURL = try FileManager.default
             .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -161,6 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         dbQueue.setupMemoryManagement(in: application)
     }
     
+    ///Register for push notifications
     func registerForPushNotifications() {
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current() // 1
@@ -174,7 +170,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     
-    
+    ///Get notificaitons from current notification center
     func getNotificationSettings() {
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().getNotificationSettings { settings in
@@ -185,7 +181,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
     }
     
-    
+    ///fetch notifications from firebase
     var alarms = [Alarm]()
     func fetchFromFirebase(){
         let userID = Auth.auth().currentUser?.uid

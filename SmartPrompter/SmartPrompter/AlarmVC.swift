@@ -48,7 +48,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
     var alarmIndex = Int()
     
     
-    
+    ///Main function of the view controller. all of the functions UIelement setups are called here. 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
