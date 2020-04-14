@@ -2,148 +2,99 @@
   "warnings": [
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 12,
-      "symbol": "Alarm",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 14,
+      "line": 15,
       "symbol": "Alarm.id",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 15,
+      "line": 16,
       "symbol": "Alarm.firebaseID",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 16,
+      "line": 17,
       "symbol": "Alarm.label",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 17,
+      "line": 18,
       "symbol": "Alarm.year",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 18,
+      "line": 19,
       "symbol": "Alarm.month",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 19,
+      "line": 20,
       "symbol": "Alarm.day",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 20,
+      "line": 21,
       "symbol": "Alarm.hour",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 21,
+      "line": 22,
       "symbol": "Alarm.minute",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 22,
+      "line": 23,
       "symbol": "Alarm.active",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 23,
+      "line": 24,
       "symbol": "Alarm.status",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 24,
+      "line": 25,
       "symbol": "Alarm.deleteRequest",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 27,
+      "line": 28,
       "symbol": "Alarm.encode(to:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 37,
+      "line": 38,
       "symbol": "Alarm.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 39,
+      "line": 40,
       "symbol": "Alarm.init(label:hour:minute:year:month:day:active:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 51,
-      "symbol": "AlarmDB",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 53,
-      "symbol": "AlarmDB.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 70,
-      "symbol": "AlarmDB.insert(user:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 76,
-      "symbol": "AlarmDB.getAll()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 87,
-      "symbol": "AlarmDB.getActiveAlarms()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/Alarm.swift",
-      "line": 95,
-      "symbol": "AlarmDB.getInactiveAlarms()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -486,202 +437,146 @@
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
       "line": 19,
-      "symbol": "alarmDB",
-      "symbol_kind": "source.lang.swift.decl.var.global",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 20,
       "symbol": "activeAlarm",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 21,
+      "line": 20,
       "symbol": "inactiveAlarm",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 22,
+      "line": 21,
       "symbol": "ref",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 23,
+      "line": 22,
       "symbol": "userID",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 24,
+      "line": 23,
       "symbol": "scheduler",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 25,
+      "line": 24,
       "symbol": "fUtil",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 28,
+      "line": 27,
       "symbol": "totalTask",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 29,
+      "line": 28,
       "symbol": "completedTask",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 35,
+      "line": 34,
       "symbol": "AppDelegate",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 37,
+      "line": 36,
       "symbol": "AppDelegate.window",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 44,
-      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 91,
-      "symbol": "AppDelegate.application(_:performFetchWithCompletionHandler:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 112,
+      "line": 105,
       "symbol": "AppDelegate.applicationWillResignActive(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 118,
+      "line": 111,
       "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 123,
+      "line": 116,
       "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 128,
+      "line": 121,
       "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 132,
+      "line": 125,
       "symbol": "AppDelegate.applicationWillTerminate(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 138,
-      "symbol": "AppDelegate.application(_:didRegisterForRemoteNotificationsWithDeviceToken:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 147,
-      "symbol": "AppDelegate.application(_:didFailToRegisterForRemoteNotificationsWithError:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 164,
-      "symbol": "AppDelegate.registerForPushNotifications()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 178,
-      "symbol": "AppDelegate.getNotificationSettings()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 189,
-      "symbol": "AppDelegate.alarms",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 190,
+      "line": 186,
       "symbol": "AppDelegate.fetchFromFirebase()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 215,
+      "line": 211,
       "symbol": "AppDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 224,
+      "line": 220,
       "symbol": "AppDelegate.userNotificationCenter(_:didReceive:withCompletionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 241,
+      "line": 237,
       "symbol": "AppDelegate.downloadNotificationSound()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 278,
+      "line": 274,
       "symbol": "getDocumentsDirectory()",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/AppDelegate.swift",
-      "line": 285,
+      "line": 281,
       "symbol": "UIDevice.hasNotch",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -898,7 +793,7 @@
     },
     {
       "file": "/Users/likhongomes/Documents/Github/Smart-Prompter-Client-iOS/SmartPrompter/SmartPrompter/RewardVC.swift",
-      "line": 45,
+      "line": 44,
       "symbol": "RewardVC.imageViewSetup()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
