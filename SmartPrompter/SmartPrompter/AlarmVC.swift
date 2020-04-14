@@ -14,6 +14,7 @@ protocol AlarmVCDelegate {
     func reloadTableDelegate()
 }
 
+///View controller when an alarm is tapped from the table view
 class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     let backButton = UIButton()
@@ -93,7 +94,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
 
     }
     
-
+    ///Setup for image view on the screen
     func imageViewSetup() {
         view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -122,9 +123,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
         }
     }
     
-    
-    
-    
+    ///setup for date picked on the screen
     func showDatePicker(){
         //Formate Date
         datePicker.datePickerMode = .date
@@ -143,6 +142,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
         
     }
     
+    ///setup for take image view on the screen
     func takenImageViewSetup() {
         view.addSubview(takenImageViewer)
         takenImageViewer.translatesAutoresizingMaskIntoConstraints = false
@@ -153,6 +153,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
         takenImageViewer.contentMode = .scaleAspectFit
     }
     
+    ///setup for time picker on the screen
     func showTimePicker(){
         //Formate Date
         timePicker.datePickerMode = .time
@@ -171,6 +172,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
         
     }
     
+    ///action for done date picker
     @objc func donedatePicker(){
         
         let formatter = DateFormatter()
@@ -179,6 +181,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
         self.view.endEditing(true)
     }
     
+    ///action for done time picker
     @objc func donetimePicker(){
         
         let formatter = DateFormatter()
@@ -187,15 +190,12 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
         self.view.endEditing(true)
     }
     
+    ///action for cancel date picker button
     @objc func cancelDatePicker(){
         self.view.endEditing(true)
     }
     
-    
-    
-    
-    
-    
+    ///action for first slider when it's position is changed
     @objc func changeValue(_ sender: UISlider) {
         print("value is" , Int(sender.value));
         if(sender.value == 0){
@@ -261,7 +261,8 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
     
     
     
-    
+    /// action for second slider when its value is changed
+    /// - Parameter sender: sends itself in the function
     @objc func changeValuePictureSlider(_ sender: UISlider) {
         //print("value is" , Int(sender.value));
         if(sender.value == 0){
@@ -310,7 +311,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
     
     
     
-    
+    ///built in action for image picker controller
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
         
@@ -341,9 +342,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
                 completedTask += 1
             }
             
-            
             dismiss(animated: true, completion: {
-                
                 
                 self.alarmDelegate!.reloadTableDelegate()
                 //alarmDelegate.
@@ -357,9 +356,6 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
         guard let imageData = image.jpegData(compressionQuality: 0.1) else {
             return
         }
-        
-        
-        
         
         let storageRef = Storage.storage().reference()
         // Create a reference to the file you want to upload
@@ -381,7 +377,6 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
             }
         }
         
-        
         // print out the image size as a test
         print(image.size)
     }
@@ -395,7 +390,7 @@ class AlarmVC: UIViewController, UINavigationControllerDelegate, UIImagePickerCo
 
 extension AlarmVC {
     
-
+    ///setup alarm date text field on screen
     func alarmDateTextFieldSetup() {
         let date = Date()
         let format = DateFormatter()
@@ -415,6 +410,7 @@ extension AlarmVC {
         alarmDateTextField.isEnabled = false
     }
     
+    ///setup instruction label on screen
     func instructionLabelSetup() {
         view.addSubview(instructionLabel)
         instructionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -433,6 +429,7 @@ extension AlarmVC {
         
     }
     
+    ///setup alarm details label on screen
     func alarmDetailsLabelSetup() {
         view.addSubview(alarmDetailsLabel)
         alarmDetailsLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -444,6 +441,7 @@ extension AlarmVC {
         
     }
     
+    ///setup alarm name text field on screen
     func alarmNameTextFieldSetup() {
         view.addSubview(alarmNameTextField)
         alarmNameTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -462,7 +460,7 @@ extension AlarmVC {
     }
     
     
-    
+    ///setup back button on screen
     func backButtonSetup() {
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
@@ -473,11 +471,12 @@ extension AlarmVC {
     }
     
     
-    
+    /// action for back button when tapped
     @objc func backButtonClicked() {
         dismiss(animated: true, completion: nil)
     }
     
+    ///setup status status label on screen
     func statusStatusLabelSetup() {
         view.addSubview(statusStatusLabel)
         statusStatusLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -495,6 +494,7 @@ extension AlarmVC {
         statusStatusLabel.font = UIFont.boldSystemFont(ofSize: 20)
     }
     
+    ///setup first slider on screen
     func sliderSetup() {
         self.view.addSubview(slider)
         //slider.frame = CGRect(x: 0, y: 0, width: 250, height: 35)
@@ -518,6 +518,7 @@ extension AlarmVC {
         
     }
     
+    ///setup second slider on screen
     func pictureSliderSetup() {
         self.view.addSubview(pictureSlider)
         //slider.frame = CGRect(x: 0, y: 0, width: 250, height: 35)

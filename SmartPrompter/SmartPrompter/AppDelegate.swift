@@ -28,7 +28,7 @@ var totalTask = Double()
 var completedTask = Double()
 
 
-
+///Main app delegate, this class handles all of the core functionalities of the app
 @available(iOS 10.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {

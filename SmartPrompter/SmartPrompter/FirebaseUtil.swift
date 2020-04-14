@@ -11,6 +11,8 @@ import Firebase
 
 class FirebaseUtil {
     
+    /// Fetch one alarm from firebase with given firebase id
+    /// - Parameter firebaseID: firebase UUID
     func fetchOneObject(firebaseID:String) -> Alarm {
         let singleAlarm = Alarm()
         let userID = Auth.auth().currentUser?.uid
@@ -43,14 +45,5 @@ class FirebaseUtil {
         return singleAlarm
     }
         
-    func updateSingleData(firebaseId: String = "", label:String = "", active:Bool, hour:Int,minute:Int){
-        
-        //ref.child("Patients").child(userID!).child("Alarms").child("\(firebaseId)").setValue(["active": username])
-        
-    }
-
-    
-    
-    
 }
 
