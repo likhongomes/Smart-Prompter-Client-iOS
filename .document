@@ -1,0 +1,3 @@
+cd SmartPrompter/
+jazzy
+mv ./docs ..
